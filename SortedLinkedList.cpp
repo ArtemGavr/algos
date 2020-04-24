@@ -34,7 +34,7 @@ public:    // methods of the SortedLinkedList ADT
     void addSortedItem(int item);
     bool ListEqual(SortedLinkedList A2);
 
-private:     // data members for linked SortedLinkedList implementation 
+private:     
     int count;
     Node* first;
 };//SortedLinkedList 
@@ -60,12 +60,12 @@ private:     // data members for linked SortedLinkedList implementation
             first = first->next;
             delete temp;
         }
-    }//~SortedLinkedList 
+    }
 
     int SortedLinkedList::SortedLinkedListSize()
     {
         return count;
-    }//SortedLinkedListSize 
+    }
 
     bool SortedLinkedList::isFull()
     {
@@ -75,7 +75,7 @@ private:     // data members for linked SortedLinkedList implementation
         if (temp == NULL) result = true;
         else         delete temp;
         return result;
-    }//isFull 
+    }
 
     void SortedLinkedList::makeEmpty()
     {
@@ -93,7 +93,7 @@ private:     // data members for linked SortedLinkedList implementation
     {
         if (isFull()) {
             cout << "SortedLinkedList overflow\n";
-            return; //return to the calling function 
+            return; 
         }
         else {
           //  first = new Node(item, first);
@@ -126,7 +126,7 @@ private:     // data members for linked SortedLinkedList implementation
     }//addItem 
 
     bool SortedLinkedList::search(int item)
-        //returns true if item is in SortedLinkedList, false otherwise 
+        
     {
         Node* p = first;
         while (p != NULL)
@@ -254,30 +254,4 @@ private:     // data members for linked SortedLinkedList implementation
 
             return 0;
 
-            return 0;
-           // SortedLinkedList A; //object A of class SortedLinkedList with int items Note: without parenthesis!! 
-           //     A.addSortedItem(20);
-           // A.printSortedLinkedList();
-           //     A.addSortedItem(30);
-           // A.printSortedLinkedList();
-           //     A.addSortedItem(40);
-    
-           // A.printSortedLinkedList();
-           // 
-           // A.addSortedItem(15);
-           // A.printSortedLinkedList();
-           // if (A.search(30))
-           //     cout << "deleted item = " << A.deleteItem(30) << endl;
-           // else  cout << "Item was not found. Item was not deleted\n";
-           // A.printSortedLinkedList();
-           //if (A.search(70))
-           //  cout << "deleted item = " << A.deleteItem(70) << endl;
-           //else  cout << "Item 70 was not found.Item was not deleted\n " ;
-            //A.printSortedLinkedList();
-            ////deleting without checking the precondition 
-            //cout << "deleted item = " << A.deleteItem(60) << endl;
-            //A.printSortedLinkedList();
-            //cout << "retrieved item = " << A.retrieve(40) << endl;  //without checking the precondition 
-            //A.printSortedLinkedList();
-            //cout << "SortedLinkedList size = " << A.SortedLinkedListSize() << endl;
         }//main 
